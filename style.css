@@ -66,3 +66,20 @@ a {
 .navigation .menu .menu__item .menu__link:hover{
     color: #f06c64;
 }
+.main {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 6px;
+}
+.slider {
+    width: 100%;
+    height: 600px;
+    background-color: #f06c64;
+}
+.slider__content {
+    width: 940px;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 40px;
+}
