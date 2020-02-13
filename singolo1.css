@@ -122,3 +122,6 @@ a {
     top: 281px;
     right: 40px;
 }
+.slider__prev:hover, .slider__next:hover{
+    cursor: pointer;
+}
