@@ -27,18 +27,20 @@ a {
     height: 100%;
 }
 .logo__name {
-    display: inline-block;
     font-family: Lato, sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
-    line-height: 45px;
+    line-height: 53px;
 }
-.logo__name-star {
-    display: inline-block;
+.logo__name::after {
+    content: "*";
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 24px;
     color: #f06c64;
-    margin-left: -5px;
 }
 .navigation {
     width: 380px;
@@ -47,12 +49,7 @@ a {
 .navigation .menu {
     display: flex;
     justify-content: space-between;
-    padding-left: 0;
-}
-.navigation .menu .menu__item{
-    color: #494e62;
-}
-.navigation .menu .menu__item:first-child {
+    padding-left: 8px;
     list-style: none;
 }
 .navigation .menu .menu__item .menu__link{
@@ -62,6 +59,16 @@ a {
     color: #fff;
     text-transform: uppercase;
     line-height: 68px;
+}
+.navigation .menu .menu__item:not(:first-child)::before{
+    content: ".";
+    position: relative;
+    bottom: 3px;
+    left: -13px;
+    font-family: Lato, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #494e62;
 }
 .navigation .menu .menu__item .menu__link:hover{
     color: #f06c64;
