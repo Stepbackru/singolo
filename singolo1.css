@@ -1,6 +1,7 @@
 .body {
   margin: 0;
   padding: 0;
+  font-family: Lato, sans-serif;
 }
 a {
   color: inherit;
@@ -30,7 +31,6 @@ a {
   font-weight: bold;
   font-size: 24px;
   line-height: 53px;
-  font-family: Lato, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -52,25 +52,23 @@ a {
   padding-left: 8px;
   list-style: none;
 }
-.navigation .menu .menu__item .menu__link {
+.menu__link {
   font-weight: bold;
   font-size: 12px;
   line-height: 68px;
-  font-family: Lato, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
 }
-.navigation .menu .menu__item:not(:first-child)::before {
+.menu__item:not(:first-child)::before {
   content: ".";
   position: relative;
   bottom: 3px;
   left: -13px;
   font-weight: 400;
   font-size: 19px;
-  font-family: Lato, sans-serif;
   color: #494e62;
 }
-.navigation .menu .menu__item .menu__link:hover {
+.menu__link:hover {
   color: #f06c64;
 }
 .main {
@@ -107,28 +105,28 @@ a {
   width: 484px;
   height: 240px;
 }
-.slider__prev {
+.slider__button {
   position: absolute;
   top: 281px;
-  left: 42px;
-
   width: 16px;
   height: 27px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-.slider__next {
-  position: absolute;
-  top: 281px;
+.slider__button-prev {
+  left: 42px;
+  background-image: url(./assets/images/arrow.png);
+}
+.slider__button-next {
   right: 40px;
-  width: 16px;
-  height: 27px;
+  background-image: url(./assets/images/arrow.png);
   -webkit-transform: scale(-1, 1);
      -moz-transform: scale(-1, 1);
        -o-transform: scale(-1, 1);
           transform: scale(-1, 1);
-}
-.slider__prev:hover,
-.slider__next:hover {
-  cursor: pointer;
 }
 .services {
   width: 100%;
@@ -148,7 +146,6 @@ a {
   margin: 0;
   font-weight: 900;
   font-size: 30px;
-  font-family: Lato, sans-serif;
   color: #666d89;
 }
 .services__text {
@@ -156,7 +153,6 @@ a {
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
-  font-family: Lato, sans-serif;
   text-align: justify;
   color: #666d89;
   letter-spacing: -0.013rem;
@@ -176,7 +172,8 @@ a {
 .cards__item:nth-child(-n+3) {
   margin-bottom: 23px;
 }
-.cards__pen {
+.cards__pen,
+.cards__phone {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -186,34 +183,30 @@ a {
   top: 1px;
   left: 4px;
 }
-.cards__heart {
+.cards__heart,
+.cards__star {
   position: absolute;
   top: 1px;
   left: 10px;
-}
-.cards__phone {
-  position: absolute;
-  top: 1px;
-  left: 1px;
 }
 .cards__bubble {
   position: absolute;
   top: 1px;
   left: 5px;
 }
-.cards__star {
-  position: absolute;
-  top: 1px;
-  left: 10px;
-}
 .cards__caption {
+  position: absolute;
+  top: -2px;
   margin: 0;
+
   font-weight: 900;
   font-size: 18px;
-  font-family: Lato, sans-serif;
   color: #666d89;
 }
 .cards__description {
+  position: absolute;
+  top: 28px;
+
   width: 220px;
   margin: 0;
   overflow: hidden;
@@ -224,65 +217,34 @@ a {
   text-align: justify;
   color: #666d89;
 }
-.cards__caption-design {
-  position: absolute;
-  top: -2px;
+.cards__caption_design {
   left: 79px;
 }
-.cards__caption-ideas {
-  position: absolute;
-  top: -2px;
+.cards__caption_ideas,
+.cards__description_ideas {
   left: 84px;
 }
-.cards__caption-answer {
-  position: absolute;
-  top: -2px;
+.cards__caption_answer {
   left: 90px;
 }
-.cards__caption-responsive {
-  position: absolute;
-  top: -2px;
+.cards__caption_responsive,
+.cards__description_responsive {
   left: 80px;
 }
-.cards__caption-support {
-  position: absolute;
-  top: -2px;
+.cards__caption_support {
   left: 83px;
-
   letter-spacing: -0.02rem;
 }
-.cards__caption-feel {
-  position: absolute;
-  top: -2px;
+.cards__caption_feel {
   left: 91px;
 }
-.cards__description-design {
-  position: absolute;
-  top: 28px;
+.cards__description_design {
   left: 81px;
 }
-.cards__description-ideas {
-  position: absolute;
-  top: 28px;
-  left: 84px;
-}
-.cards__description-answer {
-  position: absolute;
-  top: 28px;
+.cards__description_answer,
+.cards__description_feel {
   left: 90px;
 }
-.cards__description-responsive {
-  position: absolute;
-  top: 28px;
-  left: 80px;
-}
-.cards__description-support {
-  position: absolute;
-  top: 28px;
+.cards__description_support {
   left: 85px;
-}
-.cards__description-feel {
-  position: absolute;
-  top: 28px;
-  left: 90px;
 }
