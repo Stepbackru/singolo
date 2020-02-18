@@ -68,6 +68,9 @@ a {
   font-size: 19px;
   color: #494e62;
 }
+.menu__link:focus {
+  color: #f06c64;
+}
 .menu__link:hover {
   color: #f06c64;
 }
