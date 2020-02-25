@@ -7,6 +7,15 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
 .portfolio {
   width: 100%;
   height: 864px; 
@@ -99,4 +108,93 @@ a {
 .portfolio__works__image:hover {
   transform: scale(1.1);
   transition: 1s;
+}
+.about-us {
+  width: 100%;
+  height: 728px;
+  background-color: #f2f2f2;
+  margin-top: 6px;
+  -webkit-box-shadow: 0px 6px 0px 0px rgba(255,255,255,1);
+     -moz-box-shadow: 0px 6px 0px 0px rgba(255,255,255,1);
+          box-shadow: 0px 6px 0px 0px rgba(255,255,255,1);
+}
+.about-us__content {
+  width: 940px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.about-us__caption {
+  margin: 62px 0 19px 1px;
+  font-weight: 900;
+  font-size: 30px;
+  color: #666d89;
+  letter-spacing: -0.01rem;
+}
+.about-us__text {
+  font-weight: 300;
+  font-size: 18px;
+  color: #767e9e;
+  text-align: justify;
+  line-height: 29px;
+  letter-spacing: -0.014rem;
+  margin-bottom: 43px;
+}
+.about-us__members {
+  display: flex;
+  width: 100%;
+  height: 443px;
+}
+.about-us__item {
+  width: 300px;
+}
+.about-us__item:first-child {
+  margin-right: 19px;
+}
+.about-us__item:nth-child(2) {
+  margin-right: 21px;
+}
+.about-us__item__caption {
+  margin: 12px 0 0;
+  font-weight: 900;
+  font-size: 18px;
+  color: #666d89;
+}
+.about-us__item__about {
+  font-weight: normal;
+  font-size: 12px;
+  color: #767e9e;
+  text-align: justify;
+  margin: 8px 0 23px;
+  line-height: 20px;
+}
+.about-us__item__caption-miles {
+  letter-spacing: -0.01rem;
+}
+.about-us__item__about-adam {
+  letter-spacing: -0.01rem;
+}
+.about-us__item__caption-scolora {
+  letter-spacing: 0.007rem;
+}
+.socials {
+  display: flex;
+}
+.socials__item {
+  display: block;
+  width: 33px;
+  height: 33px;
+  border: 1px solid #767e9e;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1px;
+  margin-right: 7px;
+}
+.socials__item:hover {
+  background-color: #d5d3d3;
+  transition: .5s;
 }
