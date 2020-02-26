@@ -107,7 +107,7 @@ a {
 }
 .portfolio__works__image:hover {
   transform: scale(1.1);
-  transition: 1s;
+  transition: .3s;
 }
 .about-us {
   width: 100%;
@@ -196,5 +196,5 @@ a {
 }
 .socials__item:hover {
   background-color: #d5d3d3;
-  transition: .5s;
+  transition: .3s;
 }
