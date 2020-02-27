@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
+    <link rel="stylesheet" href="./singolo3.css">
 </head>
-<body>
+<body class="body">
     <h1 class="visually-hidden">Singolo</h1>
-    <section class="contact">
-
+    <section class="contact" id="contact">
+        <div class="contact__content">
+            <h2 class="contact__caption">Get a Quote</h2>
+            <p class="contact__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <section class="contact__form">
+                <form class="form" action="#save" method="POST">
+                    <input class="form__input" type="text" name="name" placeholder="Name (Required)" pattern="[a-zA-Zа-яА-ЯёЁ]+" required />
+                    <input class="form__input" type="email" name="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                    <input class="form__input" type="text" name="subject" placeholder="Subject" />
+                    <textarea class="form__input form__input__textarea" name="describe" placeholder="Describe your project in detail..."></textarea>
+                    <button class="form__submit" type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
     </section>
     <footer class="footer">
         
