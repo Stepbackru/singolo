@@ -47,10 +47,16 @@ a {
   letter-spacing: -0.013rem;
   word-spacing: -0.01rem;
 }
-.contact__form {
-  width: 620px;
+.contact__form-info{
+  width: 100%;
   height: 418px;
   margin-top: 43px;
+  display: flex;
+}
+.contact__form {
+  width: 619px;
+  height: 418px;
+  margin-right: 21px;
 }
 .form {
   display: flex;
@@ -132,4 +138,55 @@ a {
   border: none;
   border-radius: 6px;
   outline: none;
+}
+.contact__info {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.info__caption {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+  color: #f0d8d9;
+  letter-spacing: 0.003rem;
+}
+.info__item {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+  color: #f0d8d9;
+}
+.info__describe {
+  margin-top: 6px;
+  text-align: justify;
+  line-height: 22px;
+  letter-spacing: -0.01rem;
+}
+.info__location {
+  margin: 25px 3px 0;
+  letter-spacing: -0.01rem;
+}
+.info__tel {
+  margin: 7px 1px;
+  letter-spacing: -0.01rem;
+}
+.info__mail {
+  margin: 1px 0;
+}
+.info__location::before {
+  content: url(./assets/images/location.svg);
+  margin-right: 13px;
+}
+.info__tel::before {
+  content: url(./assets/images/phone.svg);
+  margin-right: 11px;
+}
+.info__mail::before {
+  content: url(./assets/images/mail.svg);
+  margin-right: 10px;
+}
+.info__item:not(.info__describe):hover {
+  color: #b14a44;
 }
