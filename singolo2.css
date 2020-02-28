@@ -196,5 +196,14 @@ a {
 }
 .socials__item:hover {
   background-color: #d5d3d3;
-  transition: .3s;
+  -webkit-box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
+     -moz-box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
+          box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
+  transition: .2s;
+}
+.socials__item svg {
+  fill: #666d89;
+}
+.socials__item:hover svg {
+  fill: #4c526d;
 }
