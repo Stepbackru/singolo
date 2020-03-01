@@ -63,6 +63,7 @@ a {
   border: 1px solid #666d89;
   border-radius: 5px;
   transition: .3s;
+  white-space: nowrap;
 }
 .filter__item:first-child {
   letter-spacing: 0.04rem;

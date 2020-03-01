@@ -291,6 +291,7 @@ a {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 .filter__item:first-child {
   letter-spacing: 0.04rem;
