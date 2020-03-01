@@ -382,6 +382,8 @@ a {
   font-weight: 900;
   font-size: 18px;
   color: #666d89;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .about-us__item__about {
   margin: 8px 0 23px;

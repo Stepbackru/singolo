@@ -160,6 +160,8 @@ a {
   font-weight: 900;
   font-size: 18px;
   color: #666d89;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .about-us__item__about {
   font-weight: normal;
