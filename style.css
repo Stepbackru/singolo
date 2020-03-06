@@ -388,16 +388,16 @@ a {
   width: 100%;
   height: 443px;
 }
-.about-us__item {
+.members__item {
   width: 300px;
 }
-.about-us__item:nth-child(2) {
+.members__item:nth-child(2) {
   margin-right: 19px;
 }
-.about-us__item:nth-child(3) {
+.members__item:nth-child(3) {
   margin-right: 21px;
 }
-.about-us__item__caption {
+.members__caption {
   margin: 12px 0 0;
   overflow: hidden;
   font-weight: 900;
@@ -406,7 +406,7 @@ a {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.about-us__item__about {
+.members__about {
   height: 40px;
   margin: 8px 0 23px;
   overflow: hidden;
@@ -416,13 +416,13 @@ a {
   text-align: justify;
   color: #767e9e;
 }
-.about-us__item__caption-miles {
+.members__caption-miles {
   letter-spacing: -0.01rem;
 }
-.about-us__item__about-adam {
+.members__about-adam {
   letter-spacing: -0.01rem;
 }
-.about-us__item__caption-scolora {
+.members__caption-scolora {
   letter-spacing: 0.007rem;
 }
 .socials {

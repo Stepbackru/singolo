@@ -154,10 +154,10 @@
                     <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                     <section class="about-us__members">
                         <h6 class="visually-hidden">Members</h6>
-                        <section class="about-us__item">
-                            <img src="./assets/images/adam.jpg" alt="photo of Adam Jensen" class="about-us__item__image">
-                            <h3 class="about-us__item__caption">Adam Jensen</h3>
-                            <p class="about-us__item__about about-us__item__about-adam">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                        <section class="members__item">
+                            <img src="./assets/images/adam.jpg" alt="photo of Adam Jensen" class="members__image">
+                            <h3 class="members__caption">Adam Jensen</h3>
+                            <p class="members__about members__about-adam">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                             <article class="socials">
                                 <h6 class="visually-hidden">socials</h6>
                                 <a href="#" class="socials__item">
@@ -190,10 +190,10 @@
                                 </a>
                             </article>
                         </section>
-                        <section class="about-us__item">
-                            <img src="./assets/images/desmond.jpg" alt="photo of Desmond Miles" class="about-us__item__image">
-                            <h3 class="about-us__item__caption about-us__item__caption-miles">Desmond Miles</h3>
-                            <p class="about-us__item__about">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                        <section class="members__item">
+                            <img src="./assets/images/desmond.jpg" alt="photo of Desmond Miles" class="members__image">
+                            <h3 class="members__caption members__caption-miles">Desmond Miles</h3>
+                            <p class="members__about">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                             <article class="socials">
                                 <h6 class="visually-hidden">socials</h6>
                                 <a href="#" class="socials__item">
@@ -226,10 +226,10 @@
                                 </a>
                             </article>
                         </section>
-                        <section class="about-us__item">
-                            <img src="./assets/images/scolara.jpg" alt="photo of Scolara Visari" class="about-us__item__image">
-                            <h3 class="about-us__item__caption about-us__item__caption-scolora">Scolara Visari</h3>
-                            <p class="about-us__item__about">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                        <section class="members__item">
+                            <img src="./assets/images/scolara.jpg" alt="photo of Scolara Visari" class="members__image">
+                            <h3 class="members__caption members__caption-scolora">Scolara Visari</h3>
+                            <p class="members__about">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                             <article class="socials">
                                 <h6 class="visually-hidden">socials</h6>
                                 <a href="#" class="socials__item">
@@ -273,10 +273,10 @@
                         <section class="contact__form">
                             <h6 class="visually-hidden">contact form</h6>
                             <form class="form" action="#save" method="POST">
-                                <input class="form__input" type="text" name="name" placeholder="Name (Required)" pattern="[a-zA-Zа-яА-ЯёЁ]+" required />
-                                <input class="form__input" type="email" name="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
-                                <input class="form__input" type="text" name="subject" placeholder="Subject" />
-                                <textarea class="form__input form__input__textarea" name="describe" placeholder="Describe your project in detail..."></textarea>
+                                <input class="form__input" type="text" name="name" placeholder="Name (Required)" autocomplete="off" pattern="[a-zA-Zа-яА-ЯёЁ]+" required />
+                                <input class="form__input" type="email" name="email" placeholder="Email (Required)" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                                <input class="form__input" type="text" name="subject" placeholder="Subject" autocomplete="off" />
+                                <textarea class="form__input form__input__textarea" name="describe" placeholder="Describe your project in detail..." autocomplete="off"></textarea>
                                 <button class="form__submit" type="submit">Submit</button>
                             </form>
                         </section>
