@@ -8,6 +8,15 @@ a {
   text-decoration: none;
   outline: none;
 }
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
 .header {
   width: 100%;
   height: 89px;
@@ -291,6 +300,7 @@ a {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 .filter__item:first-child {
   letter-spacing: 0.04rem;
@@ -493,6 +503,12 @@ a {
   height: 202px;
   padding-top: 11px;
   resize: none;
+}
+.form__input:required:invalid:focus {
+  border: 1px solid #f00;
+}
+.form__input:required:valid:focus {
+  border: 1px solid #0f0;
 }
 .form__input::-webkit-input-placeholder {
   color: #f48c8f;
