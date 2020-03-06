@@ -290,6 +290,7 @@ a {
 }
 .filter__item {
   margin-right: 10px;
+  padding: 1px 6px;
   font-weight: normal;
   font-size: 12px;
   font-family: Lato, sans-serif;
