@@ -10,13 +10,13 @@ a {
   outline: none;
 }
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .header {
   width: 100%;
@@ -162,6 +162,8 @@ a {
   letter-spacing: 0.002rem;
 }
 .services__text {
+  height: 60px;
+  overflow: hidden;
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
@@ -218,6 +220,7 @@ a {
   position: absolute;
   top: 28px;
   width: 220px;
+  height: 63px;
   margin: 0;
   overflow: hidden;
   font-weight: normal;
@@ -277,9 +280,12 @@ a {
   letter-spacing: 0.01rem;
 }
 .portfolio__text {
+  height: 22px;
   margin-bottom: 12px;
+  overflow: hidden;
   font-weight: 300;
   font-size: 18px;
+  text-align: justify;
   color: #767e9e;
   letter-spacing: -0.013rem;
 }
@@ -295,6 +301,7 @@ a {
   font-size: 12px;
   font-family: Lato, sans-serif;
   color: #767e9e;
+  white-space: nowrap;
   background-color: transparent;
   border: none;
   border: 1px solid #666d89;
@@ -302,7 +309,6 @@ a {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  white-space: nowrap;
 }
 .filter__item:first-child {
   letter-spacing: 0.04rem;
@@ -367,7 +373,9 @@ a {
   letter-spacing: -0.01rem;
 }
 .about-us__text {
+  height: 58px;
   margin-bottom: 43px;
+  overflow: hidden;
   font-weight: 300;
   font-size: 18px;
   line-height: 29px;
@@ -391,14 +399,17 @@ a {
 }
 .about-us__item__caption {
   margin: 12px 0 0;
+  overflow: hidden;
   font-weight: 900;
   font-size: 18px;
   color: #666d89;
   white-space: nowrap;
-  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .about-us__item__about {
+  height: 40px;
   margin: 8px 0 23px;
+  overflow: hidden;
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
@@ -462,6 +473,8 @@ a {
   letter-spacing: -0.015rem;
 }
 .contact__text {
+  height: 58px;
+  overflow: hidden;
   font-weight: 300;
   font-size: 18px;
   line-height: 29px;
@@ -507,10 +520,10 @@ a {
   resize: none;
 }
 .form__input:required:invalid:focus {
-  border: 1px solid #f00;
+  border: 1px solid #ff0000;
 }
 .form__input:required:valid:focus {
-  border: 1px solid #0f0;
+  border: 1px solid #00ff00;
 }
 .form__input::-webkit-input-placeholder {
   color: #f48c8f;
@@ -588,7 +601,9 @@ a {
   color: #f0d8d9;
 }
 .info__describe {
+  height: 86px;
   margin-top: 6px;
+  overflow: hidden;
   line-height: 22px;
   text-align: justify;
   letter-spacing: -0.01rem;
