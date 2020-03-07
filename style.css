@@ -110,6 +110,7 @@ a {
   left: 112px;
   width: 240px;
   height: 483px;
+  z-index: 2;
 }
 .slider__iphone-horizontal {
   position: absolute;
@@ -117,6 +118,7 @@ a {
   right: 111px;
   width: 484px;
   height: 240px;
+  z-index: 2;
 }
 .slider__button {
   position: absolute;
@@ -129,6 +131,7 @@ a {
   outline: none;
   cursor: pointer;
   opacity: 0.4;
+  z-index: 10;
 }
 .slider__button-prev {
   left: 42px;
