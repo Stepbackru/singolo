@@ -525,6 +525,15 @@ a {
 .form__input:required:valid:focus {
   border: 1px solid #00ff00;
 }
+.form__input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #d6564f;
+          box-shadow: inset 0 0 0 50px #d6564f;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff;
+}
+.form__input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #767e9e !important;
+}
 .form__input::-webkit-input-placeholder {
   color: #f48c8f;
 }
