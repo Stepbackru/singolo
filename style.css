@@ -104,18 +104,18 @@ a {
 .slider__content {
   position: relative;
 }
-.slider__iphone-vertical {
+.slide__iphone-vertical {
   position: absolute;
   top: 53px;
-  left: 112px;
+  left: 52px;
   width: 240px;
   height: 483px;
   z-index: 2;
 }
-.slider__iphone-horizontal {
+.slide__iphone-horizontal {
   position: absolute;
   top: 174px;
-  right: 111px;
+  right: 51px;
   width: 484px;
   height: 240px;
   z-index: 2;
@@ -147,6 +147,31 @@ a {
 }
 .slider__button:hover {
   opacity: 1;
+}
+.slide {
+  position: relative;
+  margin: 0 auto;
+  width: 900px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.slide__wrapper {
+  display: flex;
+  height: 100%;
+  flex-shrink: 0;
+  transition: all 0.5s;
+}
+.slide__item {
+  position: relative;
+  width: 900px;
+  flex-basis: 900px;
+  flex-shrink: 0;
+  flex: 1;
+}
+.omg{
+  background: #fff;
 }
 .services {
   width: 100%;
