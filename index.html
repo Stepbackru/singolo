@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="body">
+<body class="body"  id="home">
     <header class="header">
         <div class="wrapper header__content">
             <article class="logo">
-                    <h1 class="logo__name"><a href="/singolo">Singolo</a></h1>
+                    <h1 class="logo__name"><a href="#home">Singolo</a></h1>
             </article>
             <nav class="navigation">
                 <ul class="menu">
-                    <li class="menu__item"><a href="/singolo" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
                     <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
                     <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
                     <li class="menu__item"><a href="#about-us" class="menu__link">About</a></li>
@@ -29,8 +29,26 @@
                 <h6 class="visually-hidden">slider</h6>
                 <div class="wrapper slider__content">
                     <button class="slider__button slider__button-prev"></button>
-                    <img class="slider__iphone-vertical" src="./assets/images/iPhone_vertical.png" alt="iPhone image" />
-                    <img class="slider__iphone-horizontal" src="./assets/images/iPhone_horizontal.png" alt="iPhone image" />
+                    <div class="slide">
+                        <div class="slide__wrapper">
+                            <div class="slide__item">
+                                <div class="slide__item-vertical">
+                                    <div class="item-vertical__screenBlocker"></div>
+                                    <div class="item-vertical__touchButton"></div>
+                                </div>
+                                <div class="slide__item-horizontal">
+                                    <div class="item-horizontal__screenBlocker"></div>
+                                    <div class="item-horizontal__touchButton"></div>
+                                </div>
+                                
+                                <img class="slide__iphone-vertical" src="./assets/images/iPhone_vertical.png" alt="iPhone image" />
+                                <img class="slide__iphone-horizontal" src="./assets/images/iPhone_horizontal.png" alt="iPhone image" />
+                            </div>
+                            <div class="slide__item">
+                                <img class="slide__item-slide2" src="./assets/images/slide2.png" alt="slide2" />
+                            </div>
+                        </div>
+                    </div>
                     <button class="slider__button slider__button-next"></button>
                 </div>
             </section>
@@ -78,69 +96,69 @@
                     <h2 class="portfolio__caption">Portfolio</h2>
                     <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <article class="filter">
-                        <button class="filter__item" autofocus>All</button>
-                        <button class="filter__item">Web Design</button>
-                        <button class="filter__item">Graphic Design</button>
-                        <button class="filter__item">Artwork</button>
+                        <button data-name="all" class="filter__item">All</button>
+                        <button data-name="webDesign" class="filter__item">Web Design</button>
+                        <button data-name="graphicDesign" class="filter__item">Graphic Design</button>
+                        <button data-name="artwork" class="filter__item">Artwork</button>
                         <h6 class="visually-hidden">filter</h6>
                     </article>
                     <ul class="portfolio__works">
-                        <li class="portfolio__item">
+                        <li data-name="graphicDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_1.jpg" alt="Portfolio work 1" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="webDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_2.jpg" alt="Portfolio work 2" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="artwork" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_3.jpg" alt="Portfolio work 3" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="webDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_4.jpg" alt="Portfolio work 4" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="artwork" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_5.jpg" alt="Portfolio work 5" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="graphicDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_6.jpg" alt="Portfolio work 6" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="webDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_7.jpg" alt="Portfolio work 7" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="graphicDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_8.jpg" alt="Portfolio work 8" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="artwork" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_9.jpg" alt="Portfolio work 9" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="webDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_10.jpg" alt="Portfolio work 10" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="artwork" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_11.jpg" alt="Portfolio work 11" class="portfolio__image">
                             </a>
                         </li>
-                        <li class="portfolio__item">
+                        <li data-name="webDesign" class="portfolio__item">
                             <a href="#" class="portfolio__link">
                                 <img src="./assets/images/work_12.jpg" alt="Portfolio work 12" class="portfolio__image">
                             </a>
@@ -327,5 +345,6 @@
             </article>
         </div>
     </footer>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>
