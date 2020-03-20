@@ -37,8 +37,8 @@ const filterWorksBySelectedButton = (e) => {
     for(let i = 0; i < works.length; i++) {
         works[i].style.display = 'none';
     }
-    switch (true) {
-        case e.getAttribute('data-name') === 'webDesign':
+    switch (e.getAttribute('data-name')) {
+        case 'webDesign':
             let worksCopyWebD = works.slice();
             let webD = worksCopyWebD.filter(e => e.getAttribute('data-name') !== 'webDesign');
             for(let i = 0; i < works.length; i++){
@@ -46,16 +46,16 @@ const filterWorksBySelectedButton = (e) => {
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < webD.length; i++){
-                setInterval(() => {
+                let timerWebD = setInterval(() => {
                     webD[i].style.width = 0;
                 }, 300);
                 webD[i].addEventListener('transitionend', ()=>{
                     webD[i].style.display = 'none';
+                    clearInterval(timerWebD);
                 })
             }
             break;
-        
-        case e.getAttribute('data-name') === 'graphicDesign':
+        case 'graphicDesign':
             let worksCopyGraphD = works.slice();
             let graphD = worksCopyGraphD.filter(e => e.getAttribute('data-name') !== 'graphicDesign');
             for(let i = 0; i < works.length; i++){
@@ -63,15 +63,16 @@ const filterWorksBySelectedButton = (e) => {
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < graphD.length; i++){
-                setInterval(() => {
+                let timerGraphD = setInterval(() => {
                     graphD[i].style.width = 0;
                 }, 300);
                 graphD[i].addEventListener('transitionend', ()=>{
-                    graphD[i].style.display = 'none';
+                        graphD[i].style.display = 'none';
+                        clearInterval(timerGraphD);
                 })
             }
             break;
-        case e.getAttribute('data-name') === 'artwork':
+        case 'artwork':
             let worksCopyArt = works.slice();
             let artW = worksCopyArt.filter(e => e.getAttribute('data-name') !== 'artwork');
             for(let i = 0; i < works.length; i++){
@@ -79,14 +80,13 @@ const filterWorksBySelectedButton = (e) => {
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < artW.length; i++){
-                setInterval(() => {
-                    for (let j = 0; j < artW.length; j++){
-                        artW[j].style.width = 0;
-                    }
+                let timerArt = setInterval(() => {
+                        artW[i].style.width = 0;
                 }, 300);
                 artW[i].addEventListener('transitionend', ()=>{
                     for (let j = 0; j < artW.length; j++){
                         artW[j].style.display = 'none';
+                        clearInterval(timerArt);
                     }
                 })
             }
