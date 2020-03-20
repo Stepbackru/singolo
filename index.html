@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="body">
+<body class="body"  id="home">
     <header class="header">
         <div class="wrapper header__content">
             <article class="logo">
-                    <h1 class="logo__name"><a href="/singolo">Singolo</a></h1>
+                    <h1 class="logo__name"><a href="#home">Singolo</a></h1>
             </article>
             <nav class="navigation">
                 <ul class="menu">
-                    <li class="menu__item"><a href="/singolo" class="menu__link menu__link-active">Home</a></li>
+                    <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
                     <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
                     <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
                     <li class="menu__item"><a href="#about-us" class="menu__link">About</a></li>
@@ -32,11 +32,20 @@
                     <div class="slide">
                         <div class="slide__wrapper">
                             <div class="slide__item">
+                                <div class="slide__item-vertical">
+                                    <div class="item-vertical__screenBlocker"></div>
+                                    <div class="item-vertical__touchButton"></div>
+                                </div>
+                                <div class="slide__item-horizontal">
+                                    <div class="item-horizontal__screenBlocker"></div>
+                                    <div class="item-horizontal__touchButton"></div>
+                                </div>
+                                
                                 <img class="slide__iphone-vertical" src="./assets/images/iPhone_vertical.png" alt="iPhone image" />
                                 <img class="slide__iphone-horizontal" src="./assets/images/iPhone_horizontal.png" alt="iPhone image" />
                             </div>
-                            <div class="slide__item omg">
-    
+                            <div class="slide__item">
+                                <img class="slide__item-slide2" src="./assets/images/slide2.png" alt="slide2" />
                             </div>
                         </div>
                     </div>
@@ -87,7 +96,7 @@
                     <h2 class="portfolio__caption">Portfolio</h2>
                     <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <article class="filter">
-                        <button class="filter__item" autofocus>All</button>
+                        <button class="filter__item">All</button>
                         <button class="filter__item">Web Design</button>
                         <button class="filter__item">Graphic Design</button>
                         <button class="filter__item">Artwork</button>

@@ -2,7 +2,6 @@ const SlideHandler = () => {
 
     initialSlider();
     addSlideHandler();
-    
 };
 
 const slide = document.querySelector('.slide');
