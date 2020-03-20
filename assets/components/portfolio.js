@@ -39,7 +39,8 @@ const filterWorksBySelectedButton = (e) => {
     }
     switch (e.getAttribute('data-name')) {
         case 'webDesign':
-            let webD = works.slice().filter(e => e.getAttribute('data-name') !== 'webDesign');
+            let worksCopyWebD = works.slice();
+            let webD = worksCopyWebD.filter(e => e.getAttribute('data-name') !== 'webDesign');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
@@ -55,7 +56,8 @@ const filterWorksBySelectedButton = (e) => {
             }
             break;
         case 'graphicDesign':
-            let graphD = works.slice().filter(e => e.getAttribute('data-name') !== 'graphicDesign');
+            let worksCopyGraphD = works.slice();
+            let graphD = worksCopyGraphD.filter(e => e.getAttribute('data-name') !== 'graphicDesign');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
@@ -65,24 +67,22 @@ const filterWorksBySelectedButton = (e) => {
                     graphD[i].style.width = 0;
                 }, 300);
                 graphD[i].addEventListener('transitionend', ()=>{
-                    graphD[i].style.display = 'none';
-                    clearInterval(timerGraphD);
+                        graphD[i].style.display = 'none';
+                        clearInterval(timerGraphD);
                 })
             }
             break;
         case 'artwork':
-            let artW = works.slice().filter(e => e.getAttribute('data-name') !== 'artwork');
+            let worksCopyArt = works.slice();
+            let artW = worksCopyArt.filter(e => e.getAttribute('data-name') !== 'artwork');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < artW.length; i++){
                 let timerArt = setInterval(() => {
-                    for (let j = 0; j < artW.length; j++){
-                        artW[j].style.width = 0;
-                    }
+                        artW[i].style.width = 0;
                 }, 300);
-                
                 artW[i].addEventListener('transitionend', ()=>{
                     for (let j = 0; j < artW.length; j++){
                         artW[j].style.display = 'none';
