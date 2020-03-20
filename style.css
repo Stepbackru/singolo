@@ -1,9 +1,6 @@
 html {
   scroll-behavior: smooth;
 }
-/* .test {
-  transition: all .3s;
-} */
 .body{
   min-width: 1020px;
   margin: 0;
@@ -404,7 +401,7 @@ a {
 .filter__item:first-child {
   letter-spacing: 0.04rem;
 }
-.filter__item:focus,
+.filter__item-active,
 .filter__item:hover {
   color: #dedede;
   border-color: #c5c5c5;
@@ -423,6 +420,7 @@ a {
   height: 187px;
   margin-right: 20px;
   margin-bottom: 20px;
+  transition: all .3s;
 }
 .portfolio__item:nth-child(4n+4) {
   margin-right: 0;

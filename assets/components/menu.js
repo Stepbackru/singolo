@@ -43,6 +43,7 @@ const menuLinksScrollHandler = () => {
                     if (sections[i].getAttribute('id') === menuLinks[j].getAttribute('href').substring(1)) {
                         menuLinks[j].classList.add('menu__link-active');
                     } else if(document.documentElement.scrollTop === document.documentElement.scrollHeight-document.documentElement.clientHeight) {
+                        menuLinks[menuLinks.length - 2].classList.remove('menu__link-active');
                         menuLinks[menuLinks.length - 1].classList.add('menu__link-active');
                     } else {
                         initMenuHandler();

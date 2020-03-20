@@ -37,9 +37,4 @@ const removeScreenBlockHorizontal = () => {
     }
 }
 
-// const addScreenBlock = () => {
-//     let screen = document.querySelector('.item-vertical__screenBlocker');
-//     screen.classList.add('item-vertical__screenBlocker-lock');
-// }
-
 export default PhoneScreenBlockHandler;
