@@ -47,9 +47,14 @@ const filterWorksBySelectedButton = (e) => {
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < webDStyled.length; i++){
-                webDStyled[i].style.cssText = `
-                margin-right: 20px;
-              `;
+                webDStyled[i].style.marginRight = '20px';
+                
+            }
+            for(let i = 0; i < webDStyled.length; i+=3){
+                if(i !== 0){
+                    webDStyled[i].style.marginRight = '0';
+                }
+                
             }
             for(let i = 0; i < webD.length; i++){
                 let timerWebD = setInterval(() => {
@@ -70,9 +75,14 @@ const filterWorksBySelectedButton = (e) => {
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < graphDStyled.length; i++){
-                graphDStyled[i].style.cssText = `
-                margin-right: 20px;
-              `;
+                graphDStyled[i].style.marginRight = '20px';
+                
+            }
+            for(let i = 0; i < graphDStyled.length; i+=3){
+                if(i !== 0){
+                    graphDStyled[i].style.marginRight = '0';
+                }
+                
             }
             for(let i = 0; i < graphD.length; i++){
                 let timerGraphD = setInterval(() => {
@@ -93,9 +103,14 @@ const filterWorksBySelectedButton = (e) => {
                 works[i].style.width = '220px';
             }
             for(let i = 0; i < artWDStyled.length; i++){
-                artWDStyled[i].style.cssText = `
-                margin-right: 20px;
-              `;
+                artWDStyled[i].style.marginRight = '20px';
+                
+            }
+            for(let i = 0; i < artWDStyled.length; i+=3){
+                if(i !== 0){
+                    artWDStyled[i].style.marginRight = '0';
+                }
+                
             }
             for(let i = 0; i < artW.length; i++){
                 let timerArt = setInterval(() => {

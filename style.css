@@ -410,7 +410,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 601px;
+  min-height: 200px;
   margin-top: 19px;
   padding: 0;
   list-style-type: none;
