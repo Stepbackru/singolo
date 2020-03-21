@@ -420,6 +420,7 @@ a {
   height: 187px;
   margin-right: 20px;
   margin-bottom: 20px;
+  box-sizing: border-box;
   transition: all .3s;
 }
 .portfolio__item:nth-child(4n+4) {
