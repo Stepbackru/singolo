@@ -40,10 +40,16 @@ const filterWorksBySelectedButton = (e) => {
     switch (e.getAttribute('data-name')) {
         case 'webDesign':
             let worksCopyWebD = works.slice();
+            let webDStyled = worksCopyWebD.filter(e => e.getAttribute('data-name') === 'webDesign');
             let webD = worksCopyWebD.filter(e => e.getAttribute('data-name') !== 'webDesign');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
+            }
+            for(let i = 0; i < webDStyled.length; i++){
+                webDStyled[i].style.cssText = `
+                margin-right: 20px;
+              `;
             }
             for(let i = 0; i < webD.length; i++){
                 let timerWebD = setInterval(() => {
@@ -57,37 +63,46 @@ const filterWorksBySelectedButton = (e) => {
             break;
         case 'graphicDesign':
             let worksCopyGraphD = works.slice();
+            let graphDStyled = worksCopyWebD.filter(e => e.getAttribute('data-name') === 'graphicDesign');
             let graphD = worksCopyGraphD.filter(e => e.getAttribute('data-name') !== 'graphicDesign');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
+            }
+            for(let i = 0; i < graphDStyled.length; i++){
+                graphDStyled[i].style.cssText = `
+                margin-right: 20px;
+              `;
             }
             for(let i = 0; i < graphD.length; i++){
                 let timerGraphD = setInterval(() => {
                     graphD[i].style.width = 0;
                 }, 300);
                 graphD[i].addEventListener('transitionend', ()=>{
-                        graphD[i].style.display = 'none';
-                        clearInterval(timerGraphD);
+                    graphD[i].style.display = 'none';
+                    clearInterval(timerGraphD);
                 })
             }
             break;
         case 'artwork':
             let worksCopyArt = works.slice();
+            let artWDStyled = worksCopyWebD.filter(e => e.getAttribute('data-name') === 'graphicDesign');
             let artW = worksCopyArt.filter(e => e.getAttribute('data-name') !== 'artwork');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
+            }for(let i = 0; i < artWDStyled.length; i++){
+                artWDStyled[i].style.cssText = `
+                margin-right: 20px;
+              `;
             }
             for(let i = 0; i < artW.length; i++){
                 let timerArt = setInterval(() => {
-                        artW[i].style.width = 0;
+                    artW[i].style.width = 0;
                 }, 300);
                 artW[i].addEventListener('transitionend', ()=>{
-                    for (let j = 0; j < artW.length; j++){
-                        artW[j].style.display = 'none';
+                        artW[i].style.display = 'none';
                         clearInterval(timerArt);
-                    }
                 })
             }
             break;
@@ -95,6 +110,9 @@ const filterWorksBySelectedButton = (e) => {
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
+                clearInterval(timerWebD);
+                clearInterval(timerGraphD);
+                clearInterval(timerArt);
             }
     }
 }
