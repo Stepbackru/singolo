@@ -40,7 +40,7 @@ const filterWorksBySelectedButton = (e) => {
     switch (e.getAttribute('data-name')) {
         case 'webDesign':
             let worksCopyWebD = works.slice();
-            let webDStyled = worksCopyWebD.filter(e => e.getAttribute('data-name') === 'webDesign');
+            let webDStyled = worksCopyWebD.slice().filter(e => e.getAttribute('data-name') === 'webDesign');
             let webD = worksCopyWebD.filter(e => e.getAttribute('data-name') !== 'webDesign');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
@@ -63,7 +63,7 @@ const filterWorksBySelectedButton = (e) => {
             break;
         case 'graphicDesign':
             let worksCopyGraphD = works.slice();
-            let graphDStyled = worksCopyWebD.filter(e => e.getAttribute('data-name') === 'graphicDesign');
+            let graphDStyled = worksCopyGraphD.filter(e => e.getAttribute('data-name') === 'graphicDesign');
             let graphD = worksCopyGraphD.filter(e => e.getAttribute('data-name') !== 'graphicDesign');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
@@ -86,12 +86,13 @@ const filterWorksBySelectedButton = (e) => {
             break;
         case 'artwork':
             let worksCopyArt = works.slice();
-            let artWDStyled = worksCopyWebD.filter(e => e.getAttribute('data-name') === 'graphicDesign');
+            let artWDStyled = worksCopyArt.filter(e => e.getAttribute('data-name') === 'artwork');
             let artW = worksCopyArt.filter(e => e.getAttribute('data-name') !== 'artwork');
             for(let i = 0; i < works.length; i++){
                 works[i].style.display = 'block';
                 works[i].style.width = '220px';
-            }for(let i = 0; i < artWDStyled.length; i++){
+            }
+            for(let i = 0; i < artWDStyled.length; i++){
                 artWDStyled[i].style.cssText = `
                 margin-right: 20px;
               `;
