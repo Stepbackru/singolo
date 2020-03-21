@@ -291,7 +291,7 @@
                         <section class="contact__form">
                             <h6 class="visually-hidden">contact form</h6>
                             <form class="form" action="#save" method="POST">
-                                <input class="form__input" type="text" name="name" placeholder="Name (Required)" pattern="[a-zA-Zа-яА-ЯёЁ]+" required />
+                                <input class="form__input" type="text" name="name" placeholder="Name (Required)" pattern="[a-zA-Zа-яА-ЯёЁ\s]+" required />
                                 <input class="form__input" type="email" name="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
                                 <input class="form__input" type="text" name="subject" placeholder="Subject" />
                                 <textarea class="form__input form__input__textarea" name="describe" placeholder="Describe your project in detail..."></textarea>
