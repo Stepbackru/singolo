@@ -1,12 +1,13 @@
 const PortfolioHandler = () => {
     filterClickHandler();
+    portfolioItemClickHandler();
 };
 
 const filterClickHandler = () => {
     document.querySelector('.filter').addEventListener('click', (e) => {
         if(e.target.classList.contains('filter__item')) {
             let clickedFilterItem = e.target;
-            removeSelectedFilterItem(clickedFilterItem);
+            selectedHandlerFilterItem(clickedFilterItem);
             if(clickedFilterItem.getAttribute('data-name') === 'all'){
                 showAllWorks();
             } else {
@@ -16,12 +17,30 @@ const filterClickHandler = () => {
     })
 }
 
-const removeSelectedFilterItem = (e) => {
+const portfolioItemClickHandler = () => {
+    document.querySelector('.portfolio__works').addEventListener('click', (e) => {
+        if(e.target.classList.contains('portfolio__image')) {
+            e.preventDefault();
+            let clickedPortfolioItem = e.target;
+            selectedHandlerPortfolioItem(clickedPortfolioItem);
+        }
+    })
+}
+
+const selectedHandlerFilterItem = (e) => {
     let filterItems = [...document.querySelectorAll('.filter__item')];
     for(let i = 0; i < filterItems.length; i++){
         filterItems[i].classList.remove('filter__item-active');
     }
     e.classList.add('filter__item-active');
+}
+
+const selectedHandlerPortfolioItem = (e) => {
+    let imagePortItems = [...document.querySelectorAll('.portfolio__image')];
+    for(let i = 0; i < imagePortItems.length; i++){
+        imagePortItems[i].removeAttribute('style');
+    }
+    e.style.border = '5px solid #f06c64';
 }
 
 const showAllWorks = () => {
@@ -72,8 +91,7 @@ const resetStylePortfolioItem = (arr) => {
         arr[i].removeAttribute('style');
     }
 }
-
-            
+      
 const styledMarginSortPortfolioItem = (arr) => {
     for(let i = 0; i < arr.length; i++){
         arr[i].style.marginRight = '20px';
@@ -97,5 +115,8 @@ const setTimerOfAnimationDelay = (arr, interval=150, timeout=300) => {
         }, interval);
     }
 }
+
+
+
 
 export default PortfolioHandler;
