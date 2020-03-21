@@ -7,7 +7,6 @@ const MenuLinksHandler = () => {
 const initMenuHandler = () => {
     let activeLink = document.querySelector('.menu__link-active');
     let menuLinks = [...document.querySelectorAll('.menu__link')];
-    menuLinks[0].classList.remove('menu__link-active');
     if (activeLink === null) {
         menuLinks[0].classList.add('menu__link-active');
     }
@@ -40,12 +39,15 @@ const menuLinksScrollHandler = () => {
             if(sections[i].offsetTop <= currentPos + 95 && (sections[i].offsetTop + sections[i].offsetHeight) > currentPos + 95) {
                 for(let j = 0; j < menuLinks.length; j++) {
                     menuLinks[j].classList.remove('menu__link-active');
+                    menuLinks[0].classList.add('menu__link-active');
                     if (sections[i].getAttribute('id') === menuLinks[j].getAttribute('href').substring(1)) {
                         menuLinks[j].classList.add('menu__link-active');
                     } else if(document.documentElement.scrollTop === document.documentElement.scrollHeight-document.documentElement.clientHeight) {
                         menuLinks[menuLinks.length - 2].classList.remove('menu__link-active');
                         menuLinks[menuLinks.length - 1].classList.add('menu__link-active');
+                        menuLinks[0].classList.remove('menu__link-active');
                     } else {
+                        menuLinks[0].classList.remove('menu__link-active');
                         initMenuHandler();
                     }
                 }
