@@ -27,8 +27,8 @@ const removeSelectedFilterItem = (e) => {
 const showAllWorks = () => {
     let works = [...document.querySelectorAll('.portfolio__item')];
     for(let i = 0; i < works.length; i++) {
-        works[i].style.display = 'block';
-        works[i].style.width = '220px';
+        works[i].removeAttribute('style');
+        works[i].style.transition = 'none';
     }
 }
 
@@ -42,94 +42,59 @@ const filterWorksBySelectedButton = (e) => {
             let worksCopyWebD = works.slice();
             let webDStyled = worksCopyWebD.slice().filter(e => e.getAttribute('data-name') === 'webDesign');
             let webD = worksCopyWebD.filter(e => e.getAttribute('data-name') !== 'webDesign');
-            for(let i = 0; i < works.length; i++){
-                works[i].style.display = 'block';
-                works[i].style.width = '220px';
-            }
-            for(let i = 0; i < webDStyled.length; i++){
-                webDStyled[i].style.marginRight = '20px';
-                
-            }
-            for(let i = 0; i < webDStyled.length; i+=3){
-                if(i !== 0){
-                    webDStyled[i].style.marginRight = '0';
-                }
-                
-            }
-            for(let i = 0; i < webD.length; i++){
-                let timerWebD = setInterval(() => {
-                    webD[i].style.width = 0;
-                }, 300);
-                webD[i].addEventListener('transitionend', ()=>{
-                    webD[i].style.display = 'none';
-                    clearInterval(timerWebD);
-                })
-            }
+            resetStylePortfolioItem(works);
+            setTimerOfAnimationDelay(webD);
+            styledMarginSortPortfolioItem(webDStyled);
             break;
         case 'graphicDesign':
             let worksCopyGraphD = works.slice();
             let graphDStyled = worksCopyGraphD.filter(e => e.getAttribute('data-name') === 'graphicDesign');
             let graphD = worksCopyGraphD.filter(e => e.getAttribute('data-name') !== 'graphicDesign');
-            for(let i = 0; i < works.length; i++){
-                works[i].style.display = 'block';
-                works[i].style.width = '220px';
-            }
-            for(let i = 0; i < graphDStyled.length; i++){
-                graphDStyled[i].style.marginRight = '20px';
-                
-            }
-            for(let i = 0; i < graphDStyled.length; i+=3){
-                if(i !== 0){
-                    graphDStyled[i].style.marginRight = '0';
-                }
-                
-            }
-            for(let i = 0; i < graphD.length; i++){
-                let timerGraphD = setInterval(() => {
-                    graphD[i].style.width = 0;
-                }, 300);
-                graphD[i].addEventListener('transitionend', ()=>{
-                    graphD[i].style.display = 'none';
-                    clearInterval(timerGraphD);
-                })
-            }
+            resetStylePortfolioItem(works);
+            setTimerOfAnimationDelay(graphD);
+            styledMarginSortPortfolioItem(graphDStyled);
             break;
         case 'artwork':
             let worksCopyArt = works.slice();
             let artWDStyled = worksCopyArt.filter(e => e.getAttribute('data-name') === 'artwork');
             let artW = worksCopyArt.filter(e => e.getAttribute('data-name') !== 'artwork');
-            for(let i = 0; i < works.length; i++){
-                works[i].style.display = 'block';
-                works[i].style.width = '220px';
-            }
-            for(let i = 0; i < artWDStyled.length; i++){
-                artWDStyled[i].style.marginRight = '20px';
-                
-            }
-            for(let i = 0; i < artWDStyled.length; i+=3){
-                if(i !== 0){
-                    artWDStyled[i].style.marginRight = '0';
-                }
-                
-            }
-            for(let i = 0; i < artW.length; i++){
-                let timerArt = setInterval(() => {
-                    artW[i].style.width = 0;
-                }, 300);
-                artW[i].addEventListener('transitionend', ()=>{
-                        artW[i].style.display = 'none';
-                        clearInterval(timerArt);
-                })
-            }
+            resetStylePortfolioItem(works);
+            setTimerOfAnimationDelay(artW);
+            styledMarginSortPortfolioItem(artWDStyled);
             break;
         default:
-            for(let i = 0; i < works.length; i++){
-                works[i].style.display = 'block';
-                works[i].style.width = '220px';
-                clearInterval(timerWebD);
-                clearInterval(timerGraphD);
-                clearInterval(timerArt);
-            }
+            resetStylePortfolioItem(works);
+    }
+}
+
+const resetStylePortfolioItem = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        arr[i].removeAttribute('style');
+    }
+}
+
+            
+const styledMarginSortPortfolioItem = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        arr[i].style.marginRight = '20px';
+        
+    }
+    for(let i = 0; i < arr.length; i+=3){
+        if(i !== 0){
+            arr[i].style.marginRight = '0';
+        }
+    }
+}
+
+const setTimerOfAnimationDelay = (arr, interval=150, timeout=300) => {
+    for(let i = 0; i < arr.length; i++){
+        let timer = setInterval(() => {
+            arr[i].style.width = 0;
+            setTimeout(() => {
+                arr[i].style.display = 'none';
+                clearInterval(timer);
+            }, timeout);
+        }, interval);
     }
 }
 
