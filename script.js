@@ -1,7 +1,7 @@
-import MenuLinksHandler from './assets/components/menu.js';
-import SlideHandler from './assets/components/slider.js';
-import PhoneScreenBlockHandler from './assets/components/phonelock.js';
-import PortfolioHandler from './assets/components/portfolio.js';
+import MenuLinksHandler from './components/menu.js';
+import SlideHandler from './components/slider.js';
+import PhoneScreenBlockHandler from './components/phonelock.js';
+import PortfolioHandler from './components/portfolio.js';
 
 window.onload = function () {
     MenuLinksHandler();
