@@ -1,5 +1,4 @@
 const SlideHandler = () => {
-
     initialSlider();
     addSlideHandler();
 };
