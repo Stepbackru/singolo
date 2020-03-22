@@ -4,18 +4,20 @@ const FormSendingModal = () => {
 
 const ModalFormSending = () => {
     document.querySelector('.form').addEventListener('click', (e) => {
-        if(e.target.classList.contains('form__submit')) {
+        let nameForm = document.querySelector('.form__input[name="name"]');
+        let emailForm = document.querySelector('.form__input[name="email"]');
+        let subjectForm = document.querySelector('.form__input[name="subject"]');
+        let formDescription = document.querySelector('.form__input[name="description"]');
+        if(e.target.classList.contains('form__submit') && nameForm.validity.valid && emailForm.validity.valid) {
             e.preventDefault();
-            createModalForm();
+            createModalForm(subjectForm, formDescription);
             removeModalForm('modal', 'modal__confirm');
             removeModalForm('body', 'modal');
         }
     })
 }
 
-const createModalForm = () => {
-    let subjectForm = document.querySelector('.form__input[name="subject"]').value;
-    let formDescription = document.querySelector('.form__input[name="description"]').value;
+const createModalForm = (subjectForm, formDescription) => {
     let modalBlock = document.createElement('article');
     document.body.appendChild(modalBlock);
     modalBlock.classList.add('modal');
@@ -24,9 +26,9 @@ const createModalForm = () => {
     modalContent += `<div class="modal__wrapper">`;
     modalContent += `<h2 class="modal__caption">The letter was sent</h2>`;
     modalContent += `<h4 class="modal__caption-subject">Subject:</h4>`;
-    modalContent += `<p class="modal__subject">${subjectForm ? subjectForm : 'No subject'}</p>`;
+    modalContent += `<p class="modal__subject">${subjectForm.value ? subjectForm.value : 'No subject'}</p>`;
     modalContent += `<h4 class="modal__caption-decription">Description:</h4>`;
-    modalContent += `<p class="modal__decription">${formDescription ? formDescription : 'No description'}</p>`;
+    modalContent += `<p class="modal__decription">${formDescription.value ? formDescription.value : 'No description'}</p>`;
     modalContent += `<button class="modal__confirm">Ok</button>`;
     modalContent += `</div>`;
 
@@ -37,7 +39,6 @@ const createModalForm = () => {
 const removeModalForm = (parentBlock, childBlock) => {
     document.querySelector(`.${parentBlock}`).addEventListener('click', (e) => {
         if(e.target.classList.contains(`${childBlock}`)) {
-            console.log(e);
             let modalBlock = document.querySelector('.modal');
             let modalBlock2 = document.querySelector('.modal__wrapper');
             modalBlock2.style.animation = '.3s modalClose'
