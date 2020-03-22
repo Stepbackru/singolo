@@ -802,18 +802,27 @@ a {
   height: 2rem;
   margin: 0 calc(40% - 1.5rem);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Lato, sans-serif;
   color: #f0d8d9;
   text-transform: uppercase;
   background-color: #d6564f;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   outline: none;
 }
 .modal__confirm:hover {
   cursor: pointer;
   background-color: #b14a44;
+}
+.attention{
+  text-align: center;
+  font-size: 0.75rem;
+  color: #f00;
+  padding-bottom: 0.3rem;
+}
+.attention-msg {
+  padding-bottom: 0.5rem;
 }
 @keyframes modalOpen {
 0% {transform: scale(1.3);}
