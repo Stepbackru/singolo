@@ -24,9 +24,9 @@ const createModalForm = () => {
     modalContent += `<div class="modal__wrapper">`;
     modalContent += `<h2 class="modal__caption">The letter was sent</h2>`;
     modalContent += `<h4 class="modal__caption-subject">Subject:</h4>`;
-    modalContent += `<p class="modal__subject">${subjectForm}</p>`;
+    modalContent += `<p class="modal__subject">${subjectForm ? subjectForm : 'No subject'}</p>`;
     modalContent += `<h4 class="modal__caption-decription">Description:</h4>`;
-    modalContent += `<p class="modal__decription">${formDescription}</p>`;
+    modalContent += `<p class="modal__decription">${formDescription ? formDescription : 'No description'}</p>`;
     modalContent += `<button class="modal__confirm">Ok</button>`;
     modalContent += `</div>`;
 
