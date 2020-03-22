@@ -116,7 +116,4 @@ const setTimerOfAnimationDelay = (arr, interval=150, timeout=300) => {
     }
 }
 
-
-
-
 export default PortfolioHandler;
