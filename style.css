@@ -92,12 +92,6 @@ a {
   color: #f06c64;
   transition: all .3s;
 }
-@media (hover: hover) {
-  .menu__link:hover {
-    color: #f06c64;
-    transition: all .3s;
-  }
-}
 .main {
   width: 100%;
   min-height: 100px;
@@ -154,9 +148,6 @@ a {
        -o-transform: scale(-1, 1);
           transform: scale(-1, 1);
 }
-.slider__button:hover {
-  opacity: 1;
-}
 .slide {
   position: relative;
   margin: 0 auto;
@@ -204,10 +195,6 @@ a {
   width: 40px;
   height: 40px;
   z-index: 3;
-}
-.item-vertical__touchButton:hover,
-.item-horizontal__touchButton:hover {
-  cursor: pointer;
 }
 .slide__item-horizontal{
   position: absolute;
@@ -407,8 +394,7 @@ a {
 .filter__item:first-child {
   letter-spacing: 0.04rem;
 }
-.filter__item-active,
-.filter__item:hover {
+.filter__item-active {
   color: #dedede;
   border-color: #c5c5c5;
 }
@@ -447,10 +433,6 @@ a {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-}
-.portfolio__image:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
 }
 .about-us {
   width: 100%;
@@ -654,19 +636,10 @@ a {
 .form__input:focus::placeholder {
   color: transparent;
 }
-.form__input:focus,
-.form__input:hover,
-.form__submit:hover {
+.form__input:focus {
   -webkit-box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
      -moz-box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
           box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
-}
-.form__input:hover,
-.form__submit:hover {
-  background-color: #b14a44;
-}
-.form__submit:hover {
-  cursor: pointer;
 }
 .form__input:focus {
   color: #767e9e;
@@ -736,9 +709,6 @@ a {
   content: url(./assets/images/mail.svg);
   margin-right: 10px;
 }
-.info__item:not(.info__describe):hover {
-  color: #b14a44;
-}
 .footer {
   width: 100%;
   height: 76px;
@@ -756,7 +726,6 @@ a {
   color: #666d89;
   letter-spacing: -0.01rem;
 }
-
 .modal {
   width: 100%;
   height: 100%;
@@ -838,4 +807,41 @@ a {
 0% {transform: translate(-50%, -50%) scale(1);}
 50% {transform: translate(-50%, -50%) scale(1.1);}
 100% {transform: translate(-50%, -50%) scale(0);}
+}
+@media (hover: hover) {
+  .menu__link:hover {
+    color: #f06c64;
+    transition: all .3s;
+  }
+  .slider__button:hover {
+    opacity: 1;
+  }
+  .item-vertical__touchButton:hover,
+  .item-horizontal__touchButton:hover {
+    cursor: pointer;
+  }
+  .info__item:not(.info__describe):hover {
+    color: #b14a44;
+  }
+  .filter__item:hover {
+    color: #dedede;
+    border-color: #c5c5c5;
+  }
+  .portfolio__image:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  .form__input:hover,
+  .form__submit:hover {
+    background-color: #b14a44;
+  }
+  .form__input:hover,
+  .form__submit:hover {
+    -webkit-box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
+       -moz-box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
+            box-shadow: 0 0 6px -1px rgba(20,6,20,0.3);
+  }
+  .form__submit:hover {
+    cursor: pointer;
+  }
 }
