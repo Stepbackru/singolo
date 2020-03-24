@@ -1,7 +1,13 @@
 const PortfolioHandler = () => {
+    filterSelectInit();
     filterClickHandler();
     portfolioItemClickHandler();
 };
+
+const filterSelectInit = () => {
+    let filterItems = [...document.querySelectorAll('.filter__item')];
+    filterItems[0].classList.add('filter__item-active');
+}
 
 const filterClickHandler = () => {
     document.querySelector('.filter').addEventListener('click', (e) => {
