@@ -846,7 +846,7 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1019px) {
+@media (max-width: 1019px) {
   .body {
     min-width: 768px;
   }
@@ -870,8 +870,8 @@ a {
   .slide__item-horizontal {
     width: 365px;
     height: 181px;
-    top: 133px;
-    right: 0;
+    top: 132px;
+    left: 235px;
   }
   .slider__button {
     top: 212px;
@@ -1016,5 +1016,95 @@ a {
   .form__input-textarea {
     height: 159px;
     padding-top: 9px;
+  }
+}
+@media (max-width: 767px) {
+  .body {
+    min-width: 375px;
+    padding-top: 71px;
+  }
+  .header {
+    height: 68px;
+    width: 375px;
+    -webkit-box-shadow: 0 3px 0 0 rgba(50,55,70,1);
+       -moz-box-shadow: 0 3px 0 0 rgba(50,55,70,1);
+            box-shadow: 0 3px 0 0 rgba(50,55,70,1);
+  }
+  .wrapper {
+    width: 295px;
+    padding: 0 30px;
+  }
+  .navigation {
+    display: none;
+  }
+  .logo {
+    width: 92px;
+    margin: 0 auto;
+  }
+  .logo__name {
+    margin-top: 24px;
+    font-size: 20px;
+  }
+  .slider {
+    height: 218px;
+    -webkit-box-shadow: 0 3px 0 0 rgba(234,103,107,1);
+       -moz-box-shadow: 0 3px 0 0 rgba(234,103,107,1);
+            box-shadow: 0 3px 0 0 rgba(234,103,107,1);
+  }
+  .slide__iphone-vertical,
+  .slide__item-vertical {
+    width: 88px;
+    height: 178px;
+    top: 19px;
+    left: 0;
+  }
+  .slide__iphone-horizontal,
+  .slide__item-horizontal {
+    width: 178px;
+    height: 88px;
+    top: 65px;
+    left: 115px;
+  }
+  .slider__button {
+    width: 14px;
+    height: 25px;
+    top: 97px; 
+  }
+  .slider__button-prev {
+    left: 0;
+  }
+  .slider__button-next {
+    right: 0;
+  }
+  .slide,
+  .slide__item {
+    width: 293px;
+  }
+  .slide__item {
+    flex-basis: 293px;
+  }
+  .item-vertical__screenBlocker {
+    width: 69px;
+    height: 123px;
+    top: 24px;
+    left: 5px;
+  }
+  .item-vertical__touchButton {
+    bottom: 15px;
+    left: 35px;
+    width: 12px;
+    height: 12px;
+  }
+  .item-horizontal__screenBlocker {
+    width: 123px;
+    height: 69px;
+    top: 5px;
+    left: 21px;
+  }
+  .item-horizontal__touchButton {
+    top: 32px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
   }
 }
