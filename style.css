@@ -62,6 +62,117 @@ a {
   font-size: 24px;
   color: #f06c64;
 }
+.burger__icon-wrapper {
+  display: none;
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  z-index: 100;
+  width: 25px;
+  height: 20px;
+}
+.burger__icon {
+  display: block;
+  width: 100%;
+  height: 2.4px;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  z-index: 99;
+  box-sizing: border-box;
+}
+.burger__icon::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2.4px;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: transform .2s ease-in, top .2s linear .2s;
+}
+.burger__icon::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2.4px;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: transform .2s ease-in, top .2s linear .2s;
+}
+.burger__icon-active {
+  background-color: transparent;
+}
+.burger__icon-active::before {
+  transform: rotate(45deg);
+  top: 7.6px;
+  transition: top .2s linear, transform .2s ease-in .2s;
+}
+.burger__icon-active::after {
+  transform: rotate(-45deg);
+  top: 7.6px;
+  transition: top .2s linear, transform .2s ease-in .2s;
+}
+.burger {
+  display: none;
+}
+.burger-active {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.burger__wrapper {
+  width: 0;
+  height: 100%;
+  background: #2D303A;
+  -webkit-box-shadow: 10px 0px 40px -12px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 0px 40px -12px rgba(0,0,0,1);
+          box-shadow: 10px 0px 40px -12px rgba(0,0,0,1);
+  transition: width .3s ease-out;
+}
+.burger__wrapper-active {
+  width: 278px;
+  transition: width .3s ease-out;
+}
+.burger__wrapper > .logo {
+  display: none;
+  width: 92px;
+  height: 24px;
+}
+.burger__wrapper .logo .logo__name {
+  margin: 0;
+  padding: 24px 0 0;
+}
+.burger__wrapper .menu {
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 8px;
+  list-style: none;
+  width: 205px;
+  height: 260px;
+  margin: 184px 71px 0;
+}
+.burger__wrapper .menu .menu__item:not(:first-child)::before {
+  content: "";
+}
 .navigation {
   width: 380px;
   height: 100%;
@@ -1032,7 +1143,15 @@ a {
   .wrapper {
     width: 315px;
     padding: 0 30px;
-    margin: 0;
+    margin: 0 auto;
+  }
+  .burger__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .burger {
+    display: block;
   }
   .navigation {
     display: none;
@@ -1186,7 +1305,7 @@ a {
     margin: 8px 0 9px;
   }
   .contact {
-    height: 826px;
+    height: 902px;
     margin-top: 3px;
     -webkit-box-shadow: 0 3px 0 0 rgba(234,103,107,1);
        -moz-box-shadow: 0 3px 0 0 rgba(234,103,107,1);
@@ -1205,16 +1324,23 @@ a {
   }
   .contact__form {
     width: 100%;
-    height: 309px;
+    height: 391px;
     margin-right: 0;
   }
   .form__submit {
+    height: 50px;
     width: 100%;
     margin-bottom: 32px;
   }
   .contact__info {
     width: 100%;
-    height: 195px;
+    height: 191px;
+  }
+  .info__describe {
+    height: 114px;
+  }
+  .info__location {
+    margin: 5px 3px 0;
   }
   .footer {
     margin-top: 3px;

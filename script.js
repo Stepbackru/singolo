@@ -3,6 +3,7 @@ import SlideHandler from './components/slider.js';
 import PhoneScreenBlockHandler from './components/phonelock.js';
 import PortfolioHandler from './components/portfolio.js';
 import FormSendingModal from './components/formmodal.js';
+import BurgerHandler from './components/burger.js'
 
 window.onload = function () {
     MenuLinksHandler();
@@ -10,4 +11,5 @@ window.onload = function () {
     PhoneScreenBlockHandler();
     PortfolioHandler();
     FormSendingModal();
+    BurgerHandler();
 }
