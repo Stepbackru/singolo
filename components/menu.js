@@ -5,8 +5,8 @@ const MenuLinksHandler = () => {
 };
 
 const initMenuHandler = () => {
-    let activeLink = document.querySelector('.menu__link-active');
-    let menuLinks = [...document.querySelectorAll('.menu__link')];
+    let activeLink = document.querySelector('.navigation .menu__link-active');
+    let menuLinks = [...document.querySelectorAll('.navigation .menu__link')];
     if (activeLink === null) {
         menuLinks[0].classList.add('menu__link-active');
     }
@@ -31,7 +31,6 @@ const removeSelectedMenuLink = (e) => {
 
 const menuLinksScrollHandler = () => {
     document.addEventListener('scroll', () => {
-        // for(let i = 0; i < menuLinks.;e)
         let currentPos = window.scrollY;
         let sections = [...document.querySelectorAll('.header, .main > section')];
         let menuLinks = [...document.querySelectorAll('.menu__link')];
