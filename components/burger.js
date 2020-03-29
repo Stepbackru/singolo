@@ -5,6 +5,7 @@ const BurgerHandler = () => {
 const burgerActive = () => {
     document.querySelector('.header').addEventListener('click', (e) => {
         if(e.target.classList.contains('burger__icon-wrapper') || e.target.classList.contains('burger__icon')) {
+            document.querySelector('.burger__icon').classList.toggle('burger__icon-active');
             document.querySelector('.burger').classList.toggle('burger-active');
             document.querySelector('.burger__wrapper').classList.toggle('burger__wrapper-active');
             if(document.querySelector('.burger__wrapper').classList.contains('burger__wrapper-active')) {

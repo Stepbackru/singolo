@@ -96,6 +96,7 @@ a {
   border: 1px solid transparent;
   border-radius: 2px;
   box-sizing: border-box;
+  transition: transform .2s ease-in, top .2s linear .2s;
 }
 .burger__icon::after {
   position: absolute;
@@ -109,6 +110,20 @@ a {
   border: 1px solid transparent;
   border-radius: 2px;
   box-sizing: border-box;
+  transition: transform .2s ease-in, top .2s linear .2s;
+}
+.burger__icon-active {
+  background-color: transparent;
+}
+.burger__icon-active::before {
+  transform: rotate(45deg);
+  top: 7.6px;
+  transition: top .2s linear, transform .2s ease-in .2s;
+}
+.burger__icon-active::after {
+  transform: rotate(-45deg);
+  top: 7.6px;
+  transition: top .2s linear, transform .2s ease-in .2s;
 }
 .burger {
   display: none;

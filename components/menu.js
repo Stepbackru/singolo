@@ -27,6 +27,15 @@ const removeSelectedMenuLink = (e) => {
         menuLinks[i].classList.remove('menu__link-active');
     }
     e.classList.add('menu__link-active');
+    setTimeout(()=>{
+        if(document.querySelector('.burger').classList.contains('burger-active')){
+            document.querySelector('.burger__icon').classList.remove('burger__icon-active');
+            document.querySelector('.burger').classList.remove('burger-active');
+            document.querySelector('.burger__wrapper').classList.remove('burger__wrapper-active');
+            document.querySelector('.burger__wrapper > .logo').removeAttribute('style');
+            document.querySelector('.burger__wrapper > .menu').removeAttribute('style');
+        }
+    })
 }
 
 const menuLinksScrollHandler = () => {
