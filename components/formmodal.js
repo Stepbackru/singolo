@@ -41,6 +41,11 @@ const createModalForm = (subjectForm, formDescription, clickedItem) => {
 
     modalBlock.innerHTML = modalContent;
     clickedItem.disabled = true;
+    if(document.documentElement.clientWidth < 768) {
+        document.querySelector('.modal__wrapper').style.width = '18rem';
+    } else {
+        document.querySelector('.modal__wrapper').removeAttribute('style');
+    }
     return modalBlock;
 }
 
